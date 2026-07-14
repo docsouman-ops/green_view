@@ -24,26 +24,24 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-[#fafbfa]">
       {/* 🔷 HERO SECTION */}
-      <section className="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <motion.img
-            initial={{ scale: 1.05 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000"
-            alt="Drip Irrigation Sustainable Agriculture"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-          {/* Layered sunset/field background overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-green-950/95 via-green-900/80 to-transparent z-0" />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-green-950/90 to-transparent z-0" />
-        </div>
+      <section 
+        className="relative min-h-[95vh] flex items-center pt-32 pb-20 overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #091307 0%, #152410 40%, #573e0e 100%)",
+        }}
+      >
+        {/* Subtle horizontal vector lines pattern Overlay */}
+        <div 
+          className="absolute inset-0 opacity-10 pointer-events-none z-0" 
+          style={{
+            backgroundImage: "repeating-linear-gradient(0deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 10px)"
+          }}
+        />
 
-        {/* Floating background blur effects */}
+        {/* Glowing sun in top right */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-amber-500/10 blur-3xl rounded-full" />
-          <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-600/10 blur-3xl rounded-full" />
+          <div className="absolute -top-12 -right-12 sm:top-[-5%] sm:right-[-5%] w-[450px] h-[450px] bg-[#ffab00]/25 blur-[120px] rounded-full" />
+          <div className="absolute top-[10%] right-[5%] sm:top-[12%] sm:right-[8%] w-32 h-32 sm:w-44 sm:h-44 bg-[#FFEFA6]/30 blur-[25px] rounded-full" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -55,90 +53,112 @@ export default function Home() {
           >
             {/* Dual Badges */}
             <div className="flex flex-wrap gap-2.5">
-              <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/35 text-amber-400 text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full relative overflow-hidden">
-                <span className="flex h-1.5 w-1.5 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-400"></span>
-                </span>
+              <span className="inline-flex items-center gap-1.5 bg-transparent border border-[#d4af37]/40 text-[#ffb000] text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#ffb000]" />
                 Official PM Surya Ghar Registered Vendor
               </span>
-              <span className="inline-flex items-center bg-teal-500/12 border border-teal-500/30 text-teal-300 text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-transparent border border-teal-500/40 text-teal-300 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
                 WBSEDCL + CESC Covered
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight drop-shadow-sm">
-              Reliable Water.<br />
-              Renewable Power.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-teal-300 to-emerald-300">
-                Protected Harvests.
+            <h1 className="text-5xl sm:text-6xl md:text-[5.4rem] font-extrabold leading-[1.05] tracking-tight text-white">
+              Water. Power.<br />
+              Growth.<br />
+              <span className="text-[#00df89] font-extrabold drop-shadow-md">
+                All in Your Hands.
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg text-gray-200 max-w-2xl leading-relaxed">
-                We bring the right technology to your farmland — from drip irrigation and polyhouses to solar pumps — so you grow more, spend less, and worry less
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
+              Irrigation systems, solar pumps, polyhouses, and <strong className="text-white font-bold">PM Surya Ghar</strong> rooftop solar with up to <strong className="text-white font-bold">₹78,000 government subsidy</strong> — complete installation and full support across all of West Bengal.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                <Link
-                  to="/contact"
-                  className="bg-green-600 hover:bg-green-500 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-xl shadow-green-600/30"
-                >
-                  Explore Our Services
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                <Link
-                  to="/services?tab=pmsuryaghar"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-xl shadow-orange-500/20"
-                >
-                  Talk to Us
-                </Link>
-              </motion.div>
+            <div className="space-y-4 pt-2">
+              <div className="flex flex-wrap gap-4">
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    to="/contact"
+                    className="bg-[#12B76A] hover:bg-[#0fa05b] text-white px-6 py-3.5 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-lg"
+                  >
+                    <span>📅</span> Book Free Site Visit
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    to="/services?tab=pmsuryaghar"
+                    className="bg-[#FF6B00] hover:bg-[#e05e00] text-white px-6 py-3.5 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-lg shadow-orange-500/20"
+                  >
+                    ₹78,000 Subsidy — Check Now →
+                  </Link>
+                </motion.div>
+              </div>
+              <div className="flex justify-start">
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                  <Link
+                    to="/contact"
+                    className="border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center justify-center transition-all"
+                  >
+                    Talk to Us
+                  </Link>
+                </motion.div>
+              </div>
             </div>
 
             {/* Trust tags under hero */}
-            <div className="flex flex-wrap gap-x-5 gap-y-2 pt-6 text-xs text-white/70 font-semibold border-t border-white/10">
-              <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> WBSEDCL Empanelled</span>
-              <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> CESC Registered</span>
-              <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> All of West Bengal</span>
-              <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> Unlimited Install Capacity</span>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 pt-6 text-xs text-white/80 font-semibold">
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> WBSEDCL Empanelled
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> CESC Registered
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> All of West Bengal
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-400" /> Unlimited Install Capacity
+              </span>
             </div>
           </motion.div>
         </div>
 
         {/* Scrolldown hint */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1">
-          <span className="text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold">Scroll Details</span>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1.5">
+          <span className="text-[9px] text-slate-400 uppercase tracking-[0.25em] font-extrabold">Scroll Details</span>
           <motion.div 
-            animate={{ y: [0, 8, 0] }}
+            animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1"
+            className="w-5 h-8 border border-slate-500/50 rounded-full flex justify-center p-1"
           >
-            <div className="w-1 h-2 bg-green-400 rounded-full" />
+            <div className="w-1 h-2 bg-slate-400 rounded-full" />
           </motion.div>
         </div>
       </section>
 
       {/* ═══ TRUST BAR — THE CREDIBILITY BRIDGE ═══ */}
-      <section className="bg-slate-950 text-white border-y border-slate-800">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-800">
+      <section className="bg-[#070d1e] text-white border-y border-slate-900/60">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-800/40">
           <div className="p-6 sm:p-8 text-center space-y-1 hover:bg-white/5 transition-colors cursor-default">
-            <span className="text-2xl sm:text-3.5xl font-black text-yellow-400 block tracking-tight">₹78,000</span>
-            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Max Govt. Subsidy PM Surya Ghar</span>
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#ffb000] block tracking-tight">₹78,000</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Max Govt. Subsidy</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">PM Surya Ghar</span>
           </div>
           <div className="p-6 sm:p-8 text-center space-y-1 hover:bg-white/5 transition-colors cursor-default">
-            <span className="text-2xl sm:text-3.5xl font-black text-yellow-400 block tracking-tight">300 Units</span>
-            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Free Electricity Every Month</span>
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#ffb000] block tracking-tight">300 Units</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Free Electricity</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Every Month</span>
           </div>
           <div className="p-6 sm:p-8 text-center space-y-1 hover:bg-white/5 transition-colors cursor-default">
-            <span className="text-2xl sm:text-3.5xl font-black text-yellow-400 block tracking-tight">17+</span>
-            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Authorized Manufacturing Partners</span>
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#ffb000] block tracking-tight">17+</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Authorized</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Manufacturing Partners</span>
           </div>
           <div className="p-6 sm:p-8 text-center space-y-1 hover:bg-white/5 transition-colors cursor-default">
-            <span className="text-2xl sm:text-3.5xl font-black text-yellow-400 block tracking-tight">WB-Wide</span>
-            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">WBSEDCL + CESC Both Areas Covered</span>
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#ffb000] block tracking-tight">WB-Wide</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">WBSEDCL + CESC</span>
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Both Areas Covered</span>
           </div>
         </div>
       </section>
