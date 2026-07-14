@@ -419,7 +419,7 @@ export default function Home() {
           <p className="text-center text-xs uppercase tracking-[0.2em] font-bold text-gray-400 mb-8">Brands We Work With</p>
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 opacity-95">
             {[
-              "PREMIER", "JAIN IRRIGATION SYSTEM LTD.", "GreenPro"
+              "PREMIER", "JAIN IRRIGATION SYSTEM LTD.", "NETAFIM", "GreenPro"
             ].map((brand) => (
               <div key={brand} className="bg-white border border-gray-150 h-24 sm:h-28 w-60 sm:w-72 flex items-center justify-center p-6 rounded-2xl shadow-sm hover:border-green-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 {brand === "PREMIER" ? (
@@ -428,6 +428,8 @@ export default function Home() {
                   <img src="/GreenPro.png" alt="GreenPro" className="max-h-16 sm:max-h-20 max-w-full object-contain" referrerPolicy="no-referrer" />
                 ) : brand === "JAIN IRRIGATION SYSTEM LTD." ? (
                   <img src="/JAIN_IRRIGATION_SYSTEM_LTD.png" alt="Jain Irrigation Systems Ltd." className="max-h-16 sm:max-h-20 max-w-full object-contain" referrerPolicy="no-referrer" />
+                ) : brand === "NETAFIM" ? (
+                  <img src="/netafim.jpeg" alt="Netafim" className="max-h-16 sm:max-h-20 max-w-full object-contain" referrerPolicy="no-referrer" />
                 ) : (
                   <span className="text-sm font-extrabold text-gray-800">{brand}</span>
                 )}

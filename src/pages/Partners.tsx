@@ -169,55 +169,50 @@ export default function Partners() {
            {/* <p className="text-gray-600 mt-2 text-base sm:text-lg">Direct technical support and complete manufacturer warranty guarantee.</p>*/}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {brandPartners.map((brand, idx) => (
               <motion.div
                 key={brand.logoText}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="bg-gray-50 rounded-3xl p-8 border border-gray-150 flex flex-col justify-between hover:border-green-300 hover:shadow-md transition-all"
+                transition={{ duration: 0.5, delay: idx * 0.03 }}
+                className="bg-white rounded-3xl p-6 border border-gray-150 flex flex-col items-center justify-center text-center hover:border-green-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-40 sm:h-44"
               >
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start gap-4">
-                    <div className="flex items-center gap-3">
-                      {brand.logoText === "Premier Irrigation Adritec Pvt. Ltd" ? (
-                        <img src="/PREMIER.png" alt="Premier Irrigation Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "GreenPro" ? (
-                        <img src="/GreenPro.png" alt="GreenPro Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Jain Irrigation Systems Ltd." ? (
-                        <img src="/JAIN_IRRIGATION_SYSTEM_LTD.png" alt="Jain Irrigation Systems Ltd. Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "VST Tillers" ? (
-                        <img src="/vst_tillers_tractors.png" alt="VST Tillers Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Agriplast" ? (
-                        <img src="/agriplast.jpg" alt="Agriplast Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "C.R.I. Pumps" ? (
-                        <img src="/cri_pumps.gif" alt="C.R.I. Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Shakti Pumps" ? (
-                        <img src="/shakti_pumps.webp" alt="Shakti Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Pahal-Solar" ? (
-                        <img src="/pahal_solar.png" alt="Pahal Solar Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Lubi Pumps" ? (
-                        <img src="/lubi.png" alt="Lubi Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "SOVA SOLAR" ? (
-                        <img src="/sova_solar.png" alt="SOVA SOLAR Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Latteys Industries" ? (
-                        <img src="/latteys.png" alt="Latteys Industries Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Captain Polyplast Ltd" ? (
-                        <img src="/captain_polyplast.jpg" alt="Captain Polyplast Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : brand.logoText === "Greaves Cotton" ? (
-                        <img src="/greaves_cotton.png" alt="Greaves Cotton Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
-                      ) : null}
-                      <span className="text-xl font-extrabold text-gray-950 block tracking-tight leading-none">{brand.logoText}</span>
-                    </div>
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shrink-0">
-                      {brand.status}
-                    </span>
-                  </div>
-                  <h4 className="text-base font-bold text-gray-800 tracking-tight">{brand.name}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">{brand.desc}</p>
+                <div className="h-16 flex items-center justify-center mb-4">
+                  {brand.logoText === "Premier Irrigation Adritec Pvt. Ltd" ? (
+                    <img src="/PREMIER.png" alt="Premier Irrigation Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "GreenPro" ? (
+                    <img src="/GreenPro.png" alt="GreenPro Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Jain Irrigation Systems Ltd." ? (
+                    <img src="/JAIN_IRRIGATION_SYSTEM_LTD.png" alt="Jain Irrigation Systems Ltd. Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Netafim" ? (
+                    <img src="/netafim.jpeg" alt="Netafim Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "VST Tillers" ? (
+                    <img src="/vst_tillers_tractors.png" alt="VST Tillers Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Agriplast" ? (
+                    <img src="/agriplast.jpg" alt="Agriplast Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "C.R.I. Pumps" ? (
+                    <img src="/cri_pumps.gif" alt="C.R.I. Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Shakti Pumps" ? (
+                    <img src="/shakti_pumps.webp" alt="Shakti Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Pahal-Solar" ? (
+                    <img src="/pahal_solar.png" alt="Pahal Solar Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Lubi Pumps" ? (
+                    <img src="/lubi.png" alt="Lubi Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "SOVA SOLAR" ? (
+                    <img src="/sova_solar.png" alt="SOVA SOLAR Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Latteys Industries" ? (
+                    <img src="/latteys.png" alt="Latteys Industries Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Captain Polyplast Ltd" ? (
+                    <img src="/captain_polyplast.jpg" alt="Captain Polyplast Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : brand.logoText === "Greaves Cotton" ? (
+                    <img src="/greaves_cotton.png" alt="Greaves Cotton Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
+                  ) : null}
                 </div>
+                <span className="text-xs sm:text-sm font-extrabold text-gray-900 tracking-tight leading-snug line-clamp-2 max-w-[90%]">
+                  {brand.logoText}
+                </span>
               </motion.div>
             ))}
           </div>
