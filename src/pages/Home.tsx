@@ -394,7 +394,7 @@ export default function Home() {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-green-100 rounded-2xl z-0" />
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-emerald-50 rounded-2xl z-0" />
               <img 
-                src="/01.png" 
+                src="/01_opt.jpg" 
                 alt="Agricultural fields and irrigation setup" 
                 className="relative z-10 w-full h-[450px] object-cover rounded-3xl shadow-xl border border-gray-150"
                 referrerPolicy="no-referrer"

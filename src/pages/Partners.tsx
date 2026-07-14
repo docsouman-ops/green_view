@@ -111,7 +111,7 @@ const hardwareProducts = [
     desc: "UV-stabilized linear low-density polyethylene tubes with built-in path drippers to resist clogging.",
     spec: "Sizes: 12mm, 16mm, 20mm | Spacing: 30cm to 60cm",
     category: "Irrigation Components",
-    img: "/04.png"
+    img: "/polyhouse_drip.jpg"
   },
   {
     name: "Overhead Micro Sprinkler Heads",
@@ -119,7 +119,7 @@ const hardwareProducts = [
     desc: "Rotating nozzles designed to emulate uniform local rain. Best for orchard crop coverage.",
     spec: "Flow: 35 to 105 LPH | Radius: 1.5m to 4.5m",
     category: "Irrigation Components",
-    img: "/05.png"
+    img: "/05_opt.jpg"
   },
   {
     name: "High-Pressure Fogger Array",
@@ -127,7 +127,7 @@ const hardwareProducts = [
     desc: "Anti-drip misting nozzles that suspend ultra-fine micro drops to lower greenhouse temperatures instantly.",
     spec: "Nozzle: 4-Way Cross | Operating pressure: 4.0 Bar",
     category: "Polyhouse Controls",
-    img: "/06.png"
+    img: "/polyhouse_foggers.jpg"
   },
   {
     name: "UV-Stabilized Polyethylene Cladding Film",
@@ -135,7 +135,7 @@ const hardwareProducts = [
     desc: "200 Micron thick diffused polymer plastic film to resist scorching West Bengal afternoon sun and block pests.",
     spec: "Width: Up to 12m | Warranty: 5-Year UV Stability",
     category: "Polyhouse Controls",
-    img: "/07.png"
+    img: "/polyhouse_external.jpg"
   },
   {
     name: "Solar Submersible Bore Pump Set",
@@ -143,7 +143,7 @@ const hardwareProducts = [
     desc: "High-performance brushless DC submersible pumps rated to push deep water feeds smoothly up.",
     spec: "Rating: 2 HP to 7.5 HP | Flow rate: High Discharge",
     category: "Solar Pump Hardware",
-    img: "/08.png"
+    img: "/08_opt.jpg"
   },
   {
     name: "Galvanized module stands (MMS)",
@@ -151,7 +151,7 @@ const hardwareProducts = [
     desc: "Heavy structural panels fabricated by our own technicians to withstand severe cyclonic wind loads.",
     spec: "GI specs: Hot-dip Galvanized | Rated winds: 150 km/h",
     category: "Solar Pump Hardware",
-    img: "/09.png"
+    img: "/09_opt.jpg"
   }
 ];
 
