@@ -83,6 +83,24 @@ const brandPartners = [
     status: "Sourced Systems Partner",
     desc: "Specialized in advanced agricultural textiles, providing high-quality weed mats, insect screens, and shade nets to protect crops from severe weather.",
     logoText: "GreenPro"
+  },
+  {
+    name: "RATNAGIRI IMEX",
+    status: "Authorised Partner",
+    desc: "Ratnagiri Imex offers reliable agricultural equipment tailored to meet the evolving needs of modern farming. Its products combine quality engineering with long service life.",
+    logoText: "RATNAGIRI"
+  },
+  {
+    name: " BMI CABLES PVT LTD",
+    status: "Authorised Partner",
+    desc: "BMI Cables delivers high-quality electrical cables designed for secure and efficient power distribution. The brand is trusted for consistent quality and reliability.",
+    logoText: "BMI CABLES"
+  },
+  {
+    name: "KISHAN KRAFT",
+    status: "Authorised Partner",
+    desc: "Kishan Kraft is known for versatile agricultural machinery that improves operational efficiency. The brand focuses on durability, ease of use, and consistent field performance.",
+    logoText: "KISHAN KRAFT"
   }
 ];
 
@@ -92,42 +110,48 @@ const hardwareProducts = [
     brand: "Premier Adritec / Jain / Captain",
     desc: "UV-stabilized linear low-density polyethylene tubes with built-in path drippers to resist clogging.",
     spec: "Sizes: 12mm, 16mm, 20mm | Spacing: 30cm to 60cm",
-    category: "Irrigation Components"
+    category: "Irrigation Components",
+    img: "/04.png"
   },
   {
     name: "Overhead Micro Sprinkler Heads",
     brand: "Jain Irrigation / Premier",
     desc: "Rotating nozzles designed to emulate uniform local rain. Best for orchard crop coverage.",
     spec: "Flow: 35 to 105 LPH | Radius: 1.5m to 4.5m",
-    category: "Irrigation Components"
+    category: "Irrigation Components",
+    img: "/05.png"
   },
   {
     name: "High-Pressure Fogger Array",
     brand: "Netafim",
     desc: "Anti-drip misting nozzles that suspend ultra-fine micro drops to lower greenhouse temperatures instantly.",
     spec: "Nozzle: 4-Way Cross | Operating pressure: 4.0 Bar",
-    category: "Polyhouse Controls"
+    category: "Polyhouse Controls",
+    img: "/06.png"
   },
   {
     name: "UV-Stabilized Polyethylene Cladding Film",
     brand: "Agriplast / GreenPro",
     desc: "200 Micron thick diffused polymer plastic film to resist scorching West Bengal afternoon sun and block pests.",
     spec: "Width: Up to 12m | Warranty: 5-Year UV Stability",
-    category: "Polyhouse Controls"
+    category: "Polyhouse Controls",
+    img: "/07.png"
   },
   {
     name: "Solar Submersible Bore Pump Set",
     brand: "Shakti / CRI / Lubi / Latteys",
     desc: "High-performance brushless DC submersible pumps rated to push deep water feeds smoothly up.",
     spec: "Rating: 2 HP to 7.5 HP | Flow rate: High Discharge",
-    category: "Solar Pump Hardware"
+    category: "Solar Pump Hardware",
+    img: "/08.png"
   },
   {
     name: "Galvanized module stands (MMS)",
     brand: "Green View (In-House Fabrication)",
     desc: "Heavy structural panels fabricated by our own technicians to withstand severe cyclonic wind loads.",
     spec: "GI specs: Hot-dip Galvanized | Rated winds: 150 km/h",
-    category: "Solar Pump Hardware"
+    category: "Solar Pump Hardware",
+    img: "/09.png"
   }
 ];
 
@@ -169,50 +193,63 @@ export default function Partners() {
            {/* <p className="text-gray-600 mt-2 text-base sm:text-lg">Direct technical support and complete manufacturer warranty guarantee.</p>*/}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {brandPartners.map((brand, idx) => (
               <motion.div
                 key={brand.logoText}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.03 }}
-                className="bg-white rounded-3xl p-6 border border-gray-150 flex flex-col items-center justify-center text-center hover:border-green-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-40 sm:h-44"
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="bg-gray-50 rounded-3xl p-8 border border-gray-150 flex flex-col justify-between hover:border-green-300 hover:shadow-md transition-all"
               >
-                <div className="h-16 flex items-center justify-center mb-4">
-                  {brand.logoText === "Premier Irrigation Adritec Pvt. Ltd" ? (
-                    <img src="/PREMIER.png" alt="Premier Irrigation Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "GreenPro" ? (
-                    <img src="/GreenPro.png" alt="GreenPro Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Jain Irrigation Systems Ltd." ? (
-                    <img src="/JAIN_IRRIGATION_SYSTEM_LTD.png" alt="Jain Irrigation Systems Ltd. Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Netafim" ? (
-                    <img src="/netafim.jpeg" alt="Netafim Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "VST Tillers" ? (
-                    <img src="/vst_tillers_tractors.png" alt="VST Tillers Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Agriplast" ? (
-                    <img src="/agriplast.jpg" alt="Agriplast Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "C.R.I. Pumps" ? (
-                    <img src="/cri_pumps.gif" alt="C.R.I. Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Shakti Pumps" ? (
-                    <img src="/shakti_pumps.webp" alt="Shakti Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Pahal-Solar" ? (
-                    <img src="/pahal_solar.png" alt="Pahal Solar Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Lubi Pumps" ? (
-                    <img src="/lubi.png" alt="Lubi Pumps Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "SOVA SOLAR" ? (
-                    <img src="/sova_solar.png" alt="SOVA SOLAR Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Latteys Industries" ? (
-                    <img src="/latteys.png" alt="Latteys Industries Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Captain Polyplast Ltd" ? (
-                    <img src="/captain_polyplast.jpg" alt="Captain Polyplast Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : brand.logoText === "Greaves Cotton" ? (
-                    <img src="/greaves_cotton.png" alt="Greaves Cotton Logo" className="max-h-12 max-w-full object-contain" referrerPolicy="no-referrer" />
-                  ) : null}
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start gap-4">
+                    <div className="flex items-center gap-3">
+                      {brand.logoText === "Premier Irrigation Adritec Pvt. Ltd" ? (
+                        <img src="/PREMIER.png" alt="Premier Irrigation Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "GreenPro" ? (
+                        <img src="/GreenPro.png" alt="GreenPro Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Jain Irrigation Systems Ltd." ? (
+                        <img src="/JAIN_IRRIGATION_SYSTEM_LTD.png" alt="Jain Irrigation Systems Ltd. Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Netafim" ? (
+                        <img src="/netafim.jpeg" alt="Netafim Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "VST Tillers" ? (
+                        <img src="/vst_tillers_tractors.png" alt="VST Tillers Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Agriplast" ? (
+                        <img src="/agriplast.jpg" alt="Agriplast Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "C.R.I. Pumps" ? (
+                        <img src="/cri_pumps.gif" alt="C.R.I. Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Shakti Pumps" ? (
+                        <img src="/shakti_pumps.webp" alt="Shakti Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Pahal-Solar" ? (
+                        <img src="/pahal_solar.png" alt="Pahal Solar Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Lubi Pumps" ? (
+                        <img src="/lubi.png" alt="Lubi Pumps Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "SOVA SOLAR" ? (
+                        <img src="/sova.jpeg" alt="SOVA SOLAR Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Latteys Industries" ? (
+                        <img src="/latteys.png" alt="Latteys Industries Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Captain Polyplast Ltd" ? (
+                        <img src="/captain_polyplast.jpg" alt="Captain Polyplast Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "Greaves Cotton" ? (
+                        <img src="/greaves_cotton.png" alt="Greaves Cotton Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "RATNAGIRI" ? (
+                        <img src="/ratnagiri_imex.png" alt="Ratnagiri Imex Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "BMI CABLES" ? (
+                        <img src="/bmi_cables.png" alt="BMI Cables Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : brand.logoText === "KISHAN KRAFT" ? (
+                        <img src="/kisankraft.jpeg" alt="KisanKraft Logo" className="h-8 object-contain" referrerPolicy="no-referrer" />
+                      ) : null}
+                      <span className="text-xl font-extrabold text-gray-950 block tracking-tight leading-none">{brand.logoText}</span>
+                    </div>
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shrink-0">
+                      {brand.status}
+                    </span>
+                  </div>
+                  <h4 className="text-base font-bold text-gray-800 tracking-tight">{brand.name}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{brand.desc}</p>
                 </div>
-                <span className="text-xs sm:text-sm font-extrabold text-gray-900 tracking-tight leading-snug line-clamp-2 max-w-[90%]">
-                  {brand.logoText}
-                </span>
               </motion.div>
             ))}
           </div>
@@ -239,6 +276,16 @@ export default function Partners() {
                     <span className="text-[10px] uppercase font-bold text-gray-400 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-150">{p.category}</span>
                     <span className="text-[10px] uppercase font-bold text-green-600 bg-green-50 px-2.5 py-1 rounded-md">{p.brand}</span>
                   </div>
+                  {p.img && (
+                    <div className="w-full h-48 overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 mt-2">
+                      <img 
+                        src={p.img} 
+                        alt={p.name} 
+                        className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-300" 
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  )}
                   <h4 className="text-lg font-bold text-gray-950 tracking-tight leading-tight">{p.name}</h4>
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{p.desc}</p>
                 </div>
